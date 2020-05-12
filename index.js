@@ -1,3 +1,6 @@
+// change local directory from /g to /c -- suspect problems with /g
+
+
 const questions = [
 
 ];
