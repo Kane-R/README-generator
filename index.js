@@ -1,3 +1,5 @@
+// This is the index.js file you need to run to generate your README.me into the /output folder which you'll find in the same directory as this index.js file.  
+
 const BG=require ('./lib/badge.js');
 
 const fs = require("fs");
