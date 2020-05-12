@@ -21,44 +21,44 @@ const licence_names=axios.get(`https://api.github.com/licenses`)
         .then(function(licNames){
             inquirer.prompt([
                 {   type: "input",
-                    message: "Enter your GitHub username:",
+                    message: "Enter your GitHub username (exclude https://github.com/):",
                     name: "username",
-                    default: ""
+                    default: "GITHUB USERNAME NOT ENTERED"
                 },
                 {   type: "input",
-                    message: "Enter your GitHub email:",
+                    message: "Enter your contact email address:",
                     name: "email",
-                    default: ""
+                    default: "EMAIL NOT ENTERED!"
                 },
                 {
                     type: "input",
-                    message: "Enter your new repository name:",
+                    message: "Enter this repository's name:",
                     name: "repository",
-                    default: ""
+                    default: "REPO NAME NOT ENTERED!"
                 },
                 {
                     type: "input",
-                    message: "Enter a short title for your project:",
+                    message: "Enter the project Title:",
                     name: "title",
-                    default: ""
+                    default: "TITLE NOT ENTERED!"
                 },
                 {
                     type: "input",
-                    message: "Enter a description of your repository:",
+                    message: "Enter a description for this repository:",
                     name: "description",
-                    default: ""
+                    default: "DESCRIPTION NOT ENTERED!"
                 },
                 {
                     type: "input",
                     message: "Enter your installation guidelines:",
                     name: "installation",
-                    default: "Installation guidelines have not yet been defined."
+                    default: "INSTALLATION GUIDELINES NOT ENTERED!"
                 },
                 {
                     type: "input",
                     message: "Enter your usage guidelines:",
                     name: "usage",
-                    default: "Usage guidelines have not yet been defined."
+                    default: "USAGE GUIDELINES NOT ENTERED!"
                 },
                 {
                     type: "list",
@@ -70,7 +70,7 @@ const licence_names=axios.get(`https://api.github.com/licenses`)
                     type: "list",
                     message: "How can users contribute:",
                     name: "contributing",
-                    choices:["1. Unfortunately, there is no facility for external contributions at this time.",
+                    choices:["1. Contributions currently dissabled. Refer contact details below if you'd like to contribute.",
                             "2. As per the Contributor Covenant v2.0.",
                             "3. Other"],
                     default: "2. As per the Contributor Covenant v2.0."
@@ -115,13 +115,13 @@ const licence_names=axios.get(`https://api.github.com/licenses`)
                             //break;
                         case "3":
                             if (data.contributing_text ===''){
-                                return 'Unfortunately, there is no facility for external contributions at this time.'
+                                return "Contributions currently dissabled. Refer contact details below if you'd like to contribute."
                             } else {
                                 return data.contributing_text
                             };
                             //break;
                         default:
-                            return 'Unfortunately, there is no facility for external contributions at this time.';
+                            return "Contributions currently dissabled. Refer contact details below if you'd like to contribute.";
                     }
                     
                 };
