@@ -1,4 +1,8 @@
-// change local directory from /g to /c -- suspect problems with /g
+const BG=require ('./lib/badge.js');
+
+const fs = require("fs");
+const inquirer = require("inquirer");
+const axios = require("axios");
 
 
 const questions = [
