@@ -32,10 +32,22 @@ inquirer.prompt([
         message:"What is Badge 2?"
     },
     
+
+    {
+        type:"input",
+        name:"projectTitle",
+        message:"What is the project title?"
+    },
+    
+    {
+        type:"input",
+        name:"projectDescription",
+        message:"Enter the project description?"
+    },
  
     {
         type:"input",
-        name:"users name",
+        name:"usersName",
         message:"what is your name?"
     },
 
@@ -54,3 +66,32 @@ inquirer.prompt([
         message:"This is a checkbox",
         choices:["checkbox 1","checkbox 2","checkbox  3","checkbox  4"]
     }])
+
+    .then(answers =>{
+        console.log(answers);
+        const template = `
+        
+    
+        # Badge
+        ![Licence](https://img.shields.io/static/v1?label=Licence&message=BSD%203-Clause%20"New"%20or%20"Revised"%20License&color=blue)
+    
+        # PROJECT TITLE
+            ${answers["projectTitle"]}
+        # DESCRIPTION
+            ${answers ["projectDescription"]}
+        # DESCRIPTION
+            ${answers ["projectDescription"]}
+        # DESCRIPTION
+            ${answers ["projectDescription"]}
+        # DESCRIPTION
+            ${answers ["projectDescription"]}
+        # DESCRIPTION
+            ${answers ["projectDescription"]}
+
+
+        `
+        fs.writeFile("README.md", template, err=>{
+            if (err) throw err;
+            console.log("Success! this README has been added to your repo");
+        });
+    })
