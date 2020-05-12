@@ -27,8 +27,9 @@ Github repo url: https://github.com/Kane-R/README-generator
 To install this README.md generator application, clone or download this entire repository. 
 
 ## Usage <a name="usage"></a>
-- To run this application and generate a README.md file, similar to this one, type "node index.js" in your terminal.
+- To run this application and generate a README.md file, similar to this one, type "node index.js" in your terminal
 - First ensure you are in the correct directory in your terminal. The correct directory will contain index.js (look for "// This is the index.js file you need to run to generate your README.me..." at the top of index.js)
+
 NOTE: Before running this application for the first time on your local machine, it's likely or possible you'll need to install:
 - The file-system npm package (Enter "npm install file-system --save" in the application’s root directory);
 - The inquirer npm package (Enter "npm install inquirer" in the application’s root directory), and; 
