@@ -1,8 +1,7 @@
-
 # Command-line README.md Generator 
  
 
-  ![Licence](https://img.shields.io/static/v1?label=Licence&message=The%20Unlicense&color=blue)
+![Licence](https://img.shields.io/static/v1?label=Licence&message=MIT%20License&color=blue)
 
 ## Description  
 This README-generator application automates, simplifies, and speeds up the process of creating README.md files for your github repositories. This README.md file was generated using the app. This is a command-line application that runs using Node.js with the following npm packages installed:
